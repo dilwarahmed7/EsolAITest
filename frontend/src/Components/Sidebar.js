@@ -4,6 +4,9 @@ import './Sidebar.css';
 import Profile from './Profile';
 import Icon from './Icons';
 
+const API_ORIGIN = process.env.REACT_APP_API_ORIGIN || 'http://localhost:5144';
+const API_BASE = `${API_ORIGIN}/api/auth/me`;
+
 function Sidebar({ role = 'student' }) {
   const location = useLocation();
   const navigate = useNavigate();
@@ -42,7 +45,7 @@ function Sidebar({ role = 'student' }) {
 
     const fetchProfile = async () => {
       try {
-        const res = await fetch('http://localhost:5144/api/auth/me', {
+        const res = await fetch(API_BASE, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
