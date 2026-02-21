@@ -76,11 +76,12 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowReactDev", policy =>
+    options.AddPolicy("AllowFrontend", policy =>
     {
         policy.WithOrigins(
-            "http://localhost:3000",
-            "https://esol-ai-test.vercel.app"
+                "http://localhost:3000",
+                "https://esol-ai-test.vercel.app",
+                "https://esol-ai-test-git-main-dilwarahmed7s-projects.vercel.app"
             )
             .AllowAnyHeader()
             .AllowAnyMethod();
@@ -102,7 +103,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseCors("AllowReactDev");
+app.UseCors("AllowFrontend");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
