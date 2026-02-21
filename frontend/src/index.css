@@ -1,0 +1,108 @@
+:root {
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --bg-body: #f3f7ff;
+  --bg-surface: #ffffff;
+  --bg-muted: #e7eeff;
+  --text-primary: #0b1220;
+  --text-secondary: #475569;
+  --border-soft: #d6e4ff;
+  --primary: #3b82f6;
+  --primary-strong: #1d4ed8;
+  --primary-contrast: #f8fbff;
+  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.08);
+  --shadow-strong: 0 20px 50px rgba(15, 23, 42, 0.14);
+}
+
+.dark-mode {
+  --bg-body: #0b1020;
+  --bg-surface: #0f172a;
+  --bg-muted: #111c33;
+  --text-primary: #e7eeff;
+  --text-secondary: #b8c8e8;
+  --border-soft: #1f2a45;
+  --primary: #60a5fa;
+  --primary-strong: #3b82f6;
+  --primary-contrast: #0b1220;
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.35);
+  --shadow-strong: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-body);
+  color: var(--text-primary);
+}
+
+.primary-btn,
+.card-button,
+.dash-button.primary {
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: linear-gradient(120deg, #2563eb, #7c3aed);
+  color: var(--primary-contrast);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.primary-btn:hover,
+.card-button:hover,
+.dash-button.primary:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(120deg, #1d4ed8, #6d28d9);
+  box-shadow: var(--shadow-strong);
+}
+
+.ghost-btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-soft);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.ghost-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+.primary-btn.small,
+.ghost-btn.small {
+  padding: 8px 10px;
+  font-size: 0.9rem;
+}
+
+.danger-btn {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #fecdd3;
+  background: #fee2e2;
+  color: #991b1b;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.danger-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

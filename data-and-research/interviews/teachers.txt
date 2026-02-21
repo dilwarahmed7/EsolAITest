@@ -1,0 +1,67 @@
+For these interviews, I used a semi-structured format balancing guided questions with open-ended exploration to allow for unanticipated insights. I interview two teachers to get a view of what they would like to see both for their side of the application and also how it will help their students improve. For each interview, instead of writing full transcripts, I took notes of the most important parts. Each interview, before asking the questions I would explain to them my example workflow for the application.
+
+Teacher 1:
+
+1. Can you describe any frustrations you currently face with digital teaching tools or learning platforms?
+
+- Currently very time consuming to create lessons.
+- Marking also takes a very long time.
+
+2. How do you usually adapt lessons for students of different proficiency levels?
+
+- Simplify text, reduce task length, or provide more guided questions for lower-level students.
+- Higher-level students get more open-ended writing tasks. Doing this manually takes time, so any automation or level-based adjustment would be valuable.
+
+3. What do you think about the overall workflow?
+
+- Likes the structure both on teacher and student side.
+- Would like to have templates when creating lessons so doesn't have to start from scratch.
+
+4. Do you like the auto marking using an AI assistant?
+
+- Likes this a lot as it would save them a lot of time.
+- However would like to be able to edit feedback from model as it may not always be accurate.
+
+5. How do you feel about the students being able to retrye lessons?
+
+- Likes idea of 1 retry for lessons and unlimited for practice.
+- However, instead of choosing best score, show both scores if retried.
+
+6. How do you see yourself using this platform during a typical teaching week?
+
+- Use it to assign homework, track progress before tests.
+- Also, use it to provide structures revision tasks especially before exams.
+
+Teacher 2:
+
+1. Can you describe any frustrations you currently face with digital teaching tools or learning platforms?
+
+- Most platforms are not flexible enough for different class levels.
+- Tracking individual student progress across lessons is difficult.
+
+2. How do you usually adapt lessons for students of different proficiency levels?
+
+- Use the same core lesson but change question difficulty.
+- Lower-level students receive more structured tasks and extra hints.
+- Higher-level students are encouraged to write longer responses.
+
+3. What do you think about the overall workflow?
+
+- Finds the general workflow intuitive and easy to follow.
+- Likes that lessons are clearly separated into skills (reading, listening, writing, speaking).
+- Would like an option to duplicate or modify existing lessons quickly.
+
+4. Do you like the auto marking using an AI assistant?
+
+- Sees strong potential in automated marking for writing and speaking.
+- Would prefer the AI to suggest scores and feedback, with final control remaining with the teacher.
+- Wants confidence indicators to show how certain the model is.
+
+5. How do you feel about the students being able to retry lessons?
+
+- Supports limited retries to encourage improvement without abusing the system.
+
+6. How do you see yourself using this platform during a typical teaching week?
+
+- Regularly assigns short homework tasks through the platform.
+- Uses dashboards to monitor weaker students and intervene early.

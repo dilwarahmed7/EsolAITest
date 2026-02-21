@@ -1,0 +1,33 @@
+This research will allow me to collate a csv file to rank different error types for different first languages of ESOL students. The purpose of this csv file is to aid the creation of practice lessons. These practice lessons will look
+at the users first lnaguage and produce 3 questions which will assess the given error type. This will be displayed for each of the 5 top error types for that first language.
+
+In the FCE dataset there are already a few languages where the error types are shown when made. So using script I collated the top 5 error types for each of the languages in the dataset.
+For example, for each student where the first language was Spanish here are the most common error types with their given weights:
+Spanish,WordChoice,20.5
+Spanish,VerbForm,17.6
+Spanish,Article,12.6
+Spanish,Preposition,11.9
+Spanish,VerbTense,10.2
+
+There is a bit og variation with languages already, however, when it comes to user testing a lot of the students I will test with are south asian so this includes
+languages like Bengali, Hindi, Punjabi etc. Because of this, I looked into a few different research papers where people looked at the most common error types for these languages.
+This allowed me to collate data that gives weights to each specific error type. 
+For example, for each student where the first language was Bengali here are the most common error types with their given weights:
+Bengali,Punctuation,25.8
+Bengali,Agreement,21.0
+Bengali,Preposition,14.8
+Bengali,VerbTense,15.6
+Bengali,Spelling,15.5
+
+The use case of this csv file as mentioned before will be for practice lessons tailored to specific first languages.
+So for a Bengali user who has a proficiency level of B1, I will look to use a Gemini Wrapper (2.5 flash) to create 3 questions taking into account
+the first langauge, age, proficiency level and error type. These will be created if clicked on the practice lesson. This is one section of the practice page.
+
+Here are the links to the research papers for other languages that weren't in the FCE dataset:
+Punjabi: https://www.humapub.com/admin/alljournals/glr/papers/lPZbWUZfVp.pdf - Error Analysis of Punjabi ESL Learners' Imperative's Direct and Indirect Narration
+
+Bengali: https://www.jallr.com/index.php/JALLR/article/view/1365 - English Writing Problems and Remedies of Bangladeshi Undergraduate Learners
+
+Hindi: https://www.researchgate.net/publication/378117822_Error_Analysis_of_ESL_Learners_An_Indian_Perspective - Error Analysis of ESL Learners: An Indian Perspective
+
+Urdu: https://www.researchgate.net/publication/362973170_An_Error_Analysis_of_Pakistani_ESL_Learners'_Written_Manuscripts_at_University_Level - An Error Analysis of Pakistani ESL Learners’ Written Manuscripts at UniversityLevel

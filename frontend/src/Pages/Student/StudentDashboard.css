@@ -1,0 +1,368 @@
+.section-header {
+  margin: 12px 0 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header h2 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.section-subtitle {
+  margin: 4px 0 0;
+  color: var(--text-secondary);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.stat-card {
+  display: flex;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+  min-height: 120px;
+  align-items: center;
+}
+
+.stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #eef2ff;
+  color: #4f46e5;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+}
+
+.stat-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-label {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat-trend {
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.stat-trend.up {
+  color: #16a34a;
+}
+
+.stat-trend.down {
+  color: #dc2626;
+}
+
+.stat-trend.flat {
+  color: var(--text-secondary);
+}
+
+.stat-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.quick-card {
+  background: linear-gradient(160deg, #ffffff, #f8fafc);
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 260px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.quick-card:hover {
+  transform: translateY(-1px);
+  background: #ffffff;
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.12);
+}
+
+.quick-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.quick-card-title {
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.quick-card-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.quick-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lesson-placeholders {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lesson-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.lesson-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(120deg, #2563eb, #7c3aed);
+}
+
+.lesson-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lesson-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.lesson-title-placeholder,
+.lesson-meta-placeholder {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--bg-muted);
+}
+
+.lesson-title-placeholder {
+  width: 70%;
+}
+
+.lesson-meta-placeholder {
+  width: 45%;
+}
+
+.practice-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.practice-copy {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.practice-btn {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  text-align: left;
+}
+
+.practice-btn.primary {
+  background: linear-gradient(120deg, #2563eb, #7c3aed);
+  color: var(--primary-contrast);
+  border-color: transparent;
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.28);
+}
+
+.practice-btn.primary:hover {
+  background: linear-gradient(120deg, #1d4ed8, #6d28d9);
+  transform: translateY(-1px);
+}
+
+.practice-btn.ghost {
+  background: var(--bg-muted);
+  color: var(--text-primary);
+  border-color: var(--border-soft);
+}
+
+.practice-btn.ghost:hover {
+  background: var(--bg-surface);
+  transform: translateY(-1px);
+}
+
+.progress-quick-chart {
+  width: 100%;
+  height: 200px;
+  --dashboard-bar-fill: #6366f1;
+}
+
+.progress-quick-empty {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.progress-placeholder {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
+  border: 1px dashed #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  gap: 10px;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: end;
+  gap: 8px;
+  height: 100%;
+}
+
+.chart-bar {
+  height: 40%;
+  border-radius: 6px 6px 2px 2px;
+  background: linear-gradient(180deg, #2563eb 0%, #7c3aed 100%);
+  opacity: 0.7;
+}
+
+.chart-axis {
+  height: 1px;
+  width: 100%;
+  background: var(--border-soft);
+}
+
+.dashboard-placeholder {
+  min-height: 120px;
+}
+
+.class-chip {
+  margin-left: auto;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  box-shadow: 0 10px 26px rgba(79, 70, 229, 0.18);
+  font-weight: 800;
+  color: var(--text-primary);
+  min-width: 120px;
+  text-align: center;
+}
+
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: #ecfeff;
+  color: #0f172a;
+  border: 1px solid #cffafe;
+  font-weight: 700;
+}
+
+.with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+.dark-mode .stat-card {
+  box-shadow: var(--shadow-strong);
+  background: #0f172a;
+  border-color: #1f2937;
+}
+
+.dark-mode .stat-icon {
+  background: #111827;
+  color: #93c5fd;
+}
+
+.dark-mode .quick-card {
+  box-shadow: var(--shadow-strong);
+  background: #0f172a;
+  border-color: #1f2937;
+}
+
+.dark-mode .quick-card:hover {
+  background: #111827;
+}
+
+.dark-mode .lesson-row {
+  border-color: #1f2937;
+  background: #0b1224;
+}
+
+.dark-mode .practice-btn.primary {
+  box-shadow: var(--shadow-strong);
+}
+
+.dark-mode .progress-quick-chart {
+  --dashboard-bar-fill: #93c5fd;
+}
+
+.dark-mode .progress-quick-chart .recharts-text {
+  fill: #f8fafc;
+}
+
+.dark-mode .class-chip,
+.dark-mode .header-badge {
+  background: #0b1224;
+  border-color: #1f2937;
+  color: #cbd5e1;
+}
+
+@media (max-width: 640px) {
+  .quick-card {
+    min-height: unset;
+  }
+}

@@ -1,0 +1,45 @@
+.data-grid {
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  overflow: visible;
+  background: var(--bg-surface);
+}
+
+.data-grid-head,
+.data-grid-row {
+  display: grid;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+}
+
+.data-grid-head {
+  background: var(--bg-muted);
+  font-weight: 800;
+  color: var(--text-secondary);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  overflow: hidden;
+}
+
+.data-grid-body .data-grid-row:nth-child(even) {
+  background: rgba(59, 130, 246, 0.03);
+}
+
+.data-grid-row.muted {
+  color: var(--text-secondary);
+}
+
+.data-grid-cell {
+  min-width: 0;
+}
+
+.data-grid-cell.align-center {
+  text-align: center;
+  justify-self: center;
+}
+
+.data-grid-cell.align-right {
+  text-align: right;
+  justify-self: end;
+}
