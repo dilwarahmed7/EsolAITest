@@ -103,4 +103,6 @@ app.UseCors("AllowReactDev");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+
+app.MapGet("/health", () => Results.Ok("OK"));
 app.Run();
