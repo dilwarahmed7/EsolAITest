@@ -5,6 +5,9 @@ import Hero from '../../Components/Hero';
 import Icon from '../../Components/Icons';
 import './TeacherDashboard.css';
 
+const API_ORIGIN = process.env.REACT_APP_API_ORIGIN || 'http://localhost:5144';
+const API_BASE = `${API_ORIGIN}/api/teacher`;
+
 const StatCard = ({ icon, label, value, description }) => (
   <div className="stat-card">
     <div className="stat-icon">{icon}</div>
@@ -92,7 +95,7 @@ function TeacherDashboard({ role }) {
 
     const loadClasses = async () => {
       try {
-        const res = await fetch('http://localhost:5144/api/teacher/classes', {
+        const res = await fetch(`${API_BASE}/classes`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!res.ok) throw new Error('Unable to load classes.');
@@ -109,7 +112,7 @@ function TeacherDashboard({ role }) {
 
     const loadLessons = async () => {
       try {
-        const res = await fetch('http://localhost:5144/api/teacher/lessons', {
+        const res = await fetch(`${API_BASE}/lessons`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!res.ok) throw new Error('Unable to load lessons.');
@@ -137,7 +140,7 @@ function TeacherDashboard({ role }) {
     const loadSummary = async () => {
       setLoadingSummary(true);
       try {
-        const res = await fetch('http://localhost:5144/api/teacher/dashboard/summary', {
+        const res = await fetch(`${API_BASE}/dashboard/summary`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!res.ok) throw new Error();

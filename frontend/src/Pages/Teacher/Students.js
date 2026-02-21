@@ -7,7 +7,8 @@ import Icon from '../../Components/Icons';
 import { useToast } from '../../Components/ToastProvider';
 import './Students.css';
 
-const API_BASE = 'http://localhost:5144/api/teacher/classes';
+const API_ORIGIN = process.env.REACT_APP_API_ORIGIN || 'http://localhost:5144';
+const API_BASE = `${API_ORIGIN}/api/teacher/classes`;
 const PAGE_SIZE = 10;
 
 function Students({ role }) {

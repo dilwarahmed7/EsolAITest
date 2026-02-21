@@ -6,7 +6,8 @@ import Icon from '../../Components/Icons';
 import { useToast } from '../../Components/ToastProvider';
 import './MyLessons.css';
 
-const API_BASE = 'http://localhost:5144/api/student/lessons';
+const API_ORIGIN = process.env.REACT_APP_API_ORIGIN || 'http://localhost:5144';
+const API_BASE = `${API_ORIGIN}/api/student/lessons`;
 const FALLBACK_OUT_OF = 22;
 const PAGE_SIZE = 10;
 const HIDE_AI_CHANGES_REGEX = /\[\s*HIDE[\s_-]*AI[\s_-]*CHANGES\s*\]/gi;

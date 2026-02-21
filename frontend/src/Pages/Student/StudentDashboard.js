@@ -6,7 +6,8 @@ import Icon from '../../Components/Icons';
 import './StudentDashboard.css';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 
-const API_BASE = 'http://localhost:5144/api/student/lessons';
+const API_ORIGIN = process.env.REACT_APP_API_ORIGIN || 'http://localhost:5144';
+const API_BASE = `${API_ORIGIN}/api/student/lessons`;
 
 const formatDate = (raw) => {
   if (!raw) return 'No due date';

@@ -2,6 +2,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
+const API_ORIGIN = process.env.REACT_APP_API_ORIGIN || 'http://localhost:5144';
+const API_BASE = `${API_ORIGIN}/api/auth`;
+
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("");
@@ -18,7 +21,7 @@ const ForgotPassword = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5144/api/auth/forgot-password", {
+      const res = await fetch(`${API_BASE}/forgot-password`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),

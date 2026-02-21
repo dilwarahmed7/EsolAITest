@@ -7,7 +7,8 @@ import Icon from '../../Components/Icons';
 import { useToast } from '../../Components/ToastProvider';
 import './Lessons.css';
 
-const API_BASE = 'http://localhost:5144/api/teacher';
+const API_ORIGIN = process.env.REACT_APP_API_ORIGIN || 'http://localhost:5144';
+const API_BASE = `${API_ORIGIN}/api/teacher`;
 const PAGE_SIZE = 10;
 
 const createInitialReading = () => ({

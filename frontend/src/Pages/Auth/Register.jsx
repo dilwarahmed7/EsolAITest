@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { useToast } from "../../Components/ToastProvider";
 import "./Register.css";
 
+const API_ORIGIN = process.env.REACT_APP_API_ORIGIN || 'http://localhost:5144';
+const API_BASE = `${API_ORIGIN}/api/auth`;
+
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -66,7 +69,7 @@ const Register = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5144/api/auth/register", {
+      const res = await fetch(`${API_BASE}/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

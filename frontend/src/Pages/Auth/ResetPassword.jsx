@@ -2,6 +2,9 @@ import { useMemo, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import "./Login.css";
 
+const API_ORIGIN = process.env.REACT_APP_API_ORIGIN || 'http://localhost:5144';
+const API_BASE = `${API_ORIGIN}/api/auth`;
+
 const ResetPassword = () => {
   const [searchParams] = useSearchParams();
   const token = useMemo(() => searchParams.get("token") || "", [searchParams]);
@@ -29,7 +32,7 @@ const ResetPassword = () => {
 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5144/api/auth/reset-password", {
+      const res = await fetch(`${API_BASE}/reset-password`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

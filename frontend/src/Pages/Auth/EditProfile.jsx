@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import PageLayout from '../../Components/PageLayout';
 import './EditProfile.css';
 
+const API_ORIGIN = process.env.REACT_APP_API_ORIGIN || 'http://localhost:5144';
+const API_BASE = `${API_ORIGIN}/api/auth`;
+
 function EditProfile({ role }) {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
@@ -27,7 +30,7 @@ function EditProfile({ role }) {
     const loadProfile = async () => {
       setLoading(true);
       try {
-        const res = await fetch('http://localhost:5144/api/auth/me', {
+        const res = await fetch(`${API_BASE}/me`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -70,7 +73,7 @@ function EditProfile({ role }) {
       setLoading(true);
       const messages = [];
 
-      const profileRes = await fetch('http://localhost:5144/api/auth/me', {
+      const profileRes = await fetch(`${API_BASE}/me`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -113,7 +116,7 @@ function EditProfile({ role }) {
           return;
         }
 
-        const passRes = await fetch('http://localhost:5144/api/auth/change-password', {
+        const passRes = await fetch(`${API_BASE}/change-password`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
