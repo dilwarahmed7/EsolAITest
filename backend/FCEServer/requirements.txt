@@ -8,3 +8,4 @@ python-multipart==0.0.6
 sentencepiece==0.2.0
 protobuf==5.28.3
 safetensors
+joblib==1.4.2
